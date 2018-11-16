@@ -10,9 +10,24 @@ module.exports = {
       { hid: 'description', name: 'description', content: 'Barber Pond Rd. Self Storage' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'stylesheet', type: 'text/css', href: 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,300,300italic,400italic,700italic'},
+      { rel: 'stylesheet', type: 'text/css', href:'https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css'}
+    ],
+    css: false
   },
+  modules: [
+    ['nuxt-fontawesome', {
+      component: 'fa',
+      imports: [
+        //import whole set
+        {
+          set: '@fortawesome/free-solid-svg-icons',
+          icons: ['fas']
+        },
+      ]
+    }]
+   ],
   /*
   ** Customize the progress bar color
   */
@@ -36,4 +51,3 @@ module.exports = {
     }
   }
 }
-
